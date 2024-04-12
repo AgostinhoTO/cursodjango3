@@ -1,0 +1,25 @@
+<h1>Blog template</h1>
+
+{{ name }}
+<br>
+<ul>
+    {% for item in lista_tecnologias %}
+        {% if item == 'Django' %}
+            <li><b>{{ item }}</b></li>
+        {% else %}
+            <li>{{ item }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+<br>
+{% for post in posts %}
+    <h1>{{ post.title }}</h1>
+    <h2>{{ post.sub_title }}</h2>
+    <h3>{{ post.content }}</h3>
+{% endfor %}
+<!-- <ul>
+    {% for post in posts %}
+        <li><b>{{ post.title }}</b></li>
+    {% endfor %}
+</ul> -->
+
