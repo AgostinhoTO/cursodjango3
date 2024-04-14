@@ -18,6 +18,7 @@ class Post(models.Model):
         default=Categorias.GR,
     )
     deleted = models.BooleanField(default=True)
+    imagem = models.ImageField(upload_to='posts', null=True, blank=True)
 
     def full_name(self):
         return self.title + self.sub_title
